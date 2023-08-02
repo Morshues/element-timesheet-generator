@@ -1,0 +1,11 @@
+{
+    "templatePath": "./resources/template.xlsx",
+    "holidaysFolder": "./resources/",
+    "outputPath": "./output.xlsx",
+    "year": 2023,
+    "month": 8,
+    "chinese_name": "陳志明",
+    "english_name": "David",
+    "supervisor": "Stevens",
+    "position": "Super Staff"
+}
