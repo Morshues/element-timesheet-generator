@@ -10,12 +10,20 @@ npm install
 修改完成之後執行：
 
 ```
-node index.js
-```
-Or
-```
 npm start
 ```
+
+## Deploy to AWS Lambda
+
+1. 將所需node_modules建立lambda layer
+
+
+2. 執行以下指令產生 `./dist` folder，並將其中檔案deploy到lambda
+
+```
+npm run build_lambda
+```
+
 
 ## Data Source
 [中華民國政府行政機關辦公日曆表](https://data.gov.tw/dataset/14718 )

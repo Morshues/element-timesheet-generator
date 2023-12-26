@@ -1,11 +1,12 @@
 {
   "name": "element-timesheet-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Timesheet Generator bj4",
-  "main": "index.js",
+  "main": "src/starter.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node src/starter.mjs",
+    "build_lambda": "node src/build_lambda.mjs"
   },
   "author": "Morshues",
   "license": "MIT",
