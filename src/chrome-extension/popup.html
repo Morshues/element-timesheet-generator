@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+    <style>
+        body { width: 400px; }
+        .section { margin-bottom: 20px; }
+        .section textarea {
+            width: 98%;
+        }
+        .section input[type='text'] {
+            width: 90%;
+        }
+        .section.downloading input[type='button'] {
+            display: none;
+        }
+        .section span {
+            display: none;
+        }
+        .section.downloading span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Timesheet Helper</h2>
+    <div class="section">
+        <label>
+            <input type="checkbox" id="enableMenuCheckbox"> Enable Menu Button
+        </label>
+    </div>
+    <div class="section">
+        <label for="draftTextarea">Draft: </label>
+        <textarea id="draftTextarea" rows="10"></textarea>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <label for="urlInput">Endpoint</label>
+        <input type="text" id="urlInput" class="flex-grow" placeholder="https://example.com/">
+    </div>
+    <div class="section">
+        <label for="chineseNameInput">Chinese Name</label>
+        <input type="text" id="chineseNameInput" class="flex-grow">
+    </div>
+    <div class="section">
+        <label for="englishNameInput">English Name</label>
+        <input type="text" id="englishNameInput" class="flex-grow">
+    </div>
+    <div class="section">
+        <label for="supervisorInput">Supervisor</label>
+        <input type="text" id="supervisorInput" class="flex-grow">
+    </div>
+    <div class="section">
+        <label for="positionInput">Job Title</label>
+        <input type="text" id="positionInput" class="flex-grow">
+    </div>
+    <div class="section">
+        <input type="button" id="downloadButton" value="Download This Month" class="loading">
+        <input type="button" id="downloadLastButton" value="Download Last Month" class="loading">
+        <span id="downloadingText">Downloading... (Do not close this popup window)</span>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
