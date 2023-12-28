@@ -1,6 +1,6 @@
 const MONTH_WORDING = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'November', 'December']
-const START_TIME = new Date(1899, 11, 30, 17)
-const END_TIME = new Date(1899, 11, 31, 2)
+const START_TIME = new Date(Date.UTC(1899, 11, 30, 9))
+const END_TIME = new Date(Date.UTC(1899, 11, 30, 18))
 const WORKDAY_STYLE = {
     type: 'pattern',
     pattern: 'none'
