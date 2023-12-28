@@ -9,7 +9,7 @@
     "downloads"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://*.on.aws/"
   ],
   "background": {
     "service_worker": "background.js"

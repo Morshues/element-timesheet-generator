@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function updateStorage() {
-  console.log(draftTextarea.value)
   chrome.storage.sync.set({
     menu: { enabled: enableMenuCheckbox.checked },
     draft: { text: draftTextarea.value },
