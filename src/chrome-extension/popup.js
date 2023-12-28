@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const now = new Date()
     const profile = {
       url: urlInput.value,
-      year: now.getFullYear(),
+      year: (now.getMonth() === 0) ? (now.getFullYear() - 1) : now.getFullYear(),
       month: now.getMonth(),
       chinese_name: chineseNameInput.value,
       english_name: englishNameInput.value,
