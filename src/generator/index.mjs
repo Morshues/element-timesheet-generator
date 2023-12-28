@@ -22,13 +22,28 @@ export async function init(params) {
 }
 
 export const handler = async(event) => {
+  if (event.body == null || event.body === '') {
+    return {
+      statusCode: 400,
+      body: 'params missing',
+    }
+  }
+
   const params = JSON.parse(event.body)
+
+  const checkKeys = [params.year, params.month, params.chinese_name, params.english_name, params.supervisor, params.position]
+  if (checkKeys.some(param => param == null)) {
+    return {
+      statusCode: 400,
+      body: 'params missing',
+    }
+  }
+
   const initialedParams = await init(params)
   await generate(initialedParams)
 
   const buffer = await initialedParams.workbook.xlsx.writeBuffer()
 
-  console.log(buffer.toString())
   return {
     statusCode: 200,
     headers: {
