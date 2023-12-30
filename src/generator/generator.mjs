@@ -23,11 +23,11 @@ export async function generate(params) {
 
     let timeCount = 0
     for (let i = 1, i2 = 13; i <= 31; i++, i2++) {
-        let date = new Date(params.year, monthIndex, i, 8)
+        let date = new Date(Date.UTC(params.year, monthIndex, i))
         sheet1.getCell(`A${i2}`).value = date
         sheet1.getCell(`B${i2}`).value = {
             formula: `WEEKDAY(A${i2})`,
-            result: date.getDay(),
+            result: date,
         }
 
         if (params.holidaysMap[`${i}`]) {
