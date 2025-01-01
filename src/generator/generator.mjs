@@ -1,4 +1,4 @@
-const MONTH_WORDING = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'November', 'December']
+const MONTH_WORDING = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const START_TIME = new Date(Date.UTC(1899, 11, 30, 9))
 const END_TIME = new Date(Date.UTC(1899, 11, 30, 18))
 const WORKDAY_STYLE = {
