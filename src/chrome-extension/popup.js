@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const profile = {
       url: urlInput.value,
       year: (now.getMonth() === 0) ? (now.getFullYear() - 1) : now.getFullYear(),
-      month: now.getMonth(),
+      month: (now.getMonth() === 0) ? 12 : now.getMonth(),
       chinese_name: chineseNameInput.value,
       english_name: englishNameInput.value,
       supervisor: supervisorInput.value,
